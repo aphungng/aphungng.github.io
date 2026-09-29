@@ -1,57 +1,61 @@
 ---
-title: Accueil
+title: Home
+title_fr: Accueil
+title_es: Inicio
 body_class: home
 ---
 {%- assign profile = site.data.profile -%}
 {%- assign projects = site.projects | sort: 'order' -%}
+{%- assign portrait = site.data.i18n.portrait_of -%}
 
 <section class="hero">
   <div class="container">
     <h1 class="hero-name">{{ profile.name }}</h1>
     <span class="hero-rule" aria-hidden="true"></span>
-    <p class="hero-headline">{{ profile.headline }}</p>
+    <p class="hero-headline">{% include t.html obj=profile field="headline" %}</p>
   </div>
 </section>
 
 <section class="section" aria-labelledby="about-title">
   <div class="container about">
-    <img class="about-photo reveal" src="{{ profile.photo | relative_url }}" alt="Portrait de {{ profile.name }}" width="400" height="714">
+    <img class="about-photo reveal" src="{{ profile.photo | relative_url }}" alt="{{ portrait.en }} {{ profile.name }}" data-alt-fr="{{ portrait.fr }} {{ profile.name }}" data-alt-es="{{ portrait.es }} {{ profile.name }}" width="400" height="714">
     <div class="about-text reveal">
-      <h2 id="about-title" class="section-title">À propos de moi</h2>
-      <p>{{ profile.about }}</p>
-      <a class="button" href="{{ '/esprit/' | relative_url }}">En savoir +</a>
+      <h2 id="about-title" class="section-title">{% include t.html key="about_title" %}</h2>
+      <p>{% include t.html obj=profile field="about" %}</p>
+      <a class="button" href="{{ '/esprit/' | relative_url }}">{% include t.html key="learn_more" %}</a>
     </div>
   </div>
 </section>
 
 <section class="section" aria-labelledby="parcours-title">
   <div class="container">
-    <h2 id="parcours-title" class="section-title">Mon parcours</h2>
-    <h3 class="subsection-title">Formation</h3>
+    <h2 id="parcours-title" class="section-title">{% include t.html key="my_path" %}</h2>
+    <h3 class="subsection-title">{% include t.html key="education" %}</h3>
     <ol class="timeline">
       {% for item in site.data.education %}
         <li class="reveal">
-          <p class="timeline-school">{{ item.school }}</p>
-          <p class="timeline-detail">{{ item.detail }}</p>
+          <p class="timeline-school">{% include t.html obj=item field="school" %}</p>
+          <p class="timeline-detail">{% include t.html obj=item field="detail" %}</p>
         </li>
       {% endfor %}
     </ol>
-    <a class="button" href="{{ '/parcours/' | relative_url }}">En savoir +</a>
+    <a class="button" href="{{ '/parcours/' | relative_url }}">{% include t.html key="learn_more" %}</a>
   </div>
 </section>
 
 <section class="section" id="projets" aria-labelledby="projects-title">
   <div class="container">
-    <h2 id="projects-title" class="section-title">Mes projets</h2>
+    <h2 id="projects-title" class="section-title">{% include t.html key="my_projects" %}</h2>
     <ul class="project-grid">
       {% for p in projects %}
+        {%- if p.card_title -%}{%- assign field = 'card_title' -%}{%- else -%}{%- assign field = 'title' -%}{%- endif -%}
         <li class="reveal">
           <a class="project-card" href="{{ p.url | relative_url }}">
             <span class="project-card-media">
               <img src="{{ '/assets/img/projects/' | append: p.slug | append: '/cover.jpg' | relative_url }}" alt="" loading="lazy">
             </span>
-            <span class="project-card-category">{{ p.category }}</span>
-            <span class="project-card-title">{{ p.card_title | default: p.title }}</span>
+            <span class="project-card-category">{% include t.html obj=p field="category" %}</span>
+            <span class="project-card-title">{% include t.html obj=p field=field %}</span>
           </a>
         </li>
       {% endfor %}
@@ -61,9 +65,9 @@ body_class: home
 
 <section class="section" id="contact" aria-labelledby="contact-title">
   <div class="container">
-    <h2 id="contact-title" class="section-title">Contact &amp; informations</h2>
+    <h2 id="contact-title" class="section-title">{% include t.html key="contact" %}</h2>
     <ul class="contact-list">
-      <li>{% include icon.html name="pin" %}<span>{{ profile.location }}</span></li>
+      <li>{% include icon.html name="pin" %}<span>{% include t.html obj=profile field="location" %}</span></li>
       <li>{% include icon.html name="mail" %}<a href="mailto:{{ profile.email }}">{{ profile.email }}</a></li>
       <li>{% include icon.html name="doc" %}<a href="{{ profile.cv }}" target="_blank" rel="noopener">CV</a></li>
       <li>{% include icon.html name="github" %}<a href="{{ profile.github.url }}" target="_blank" rel="noopener">{{ profile.github.user }}</a></li>

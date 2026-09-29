@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'fr' }}">
+<html lang="en"{% if page.title_fr or page.title_es %} data-title-en="{{ page.title | escape }}" data-title-fr="{{ page.title_fr | default: page.title | escape }}" data-title-es="{{ page.title_es | default: page.title | escape }}"{% endif %}>
 <head>
   {% include head.html %}
 </head>
 <body{% if page.body_class %} class="{{ page.body_class }}"{% endif %}>
-  <a class="skip-link" href="#main">Aller au contenu</a>
+  <a class="skip-link" href="#main">{% include t.html key="skip" %}</a>
   {% include header.html %}
   <main id="main">
     {{ content }}

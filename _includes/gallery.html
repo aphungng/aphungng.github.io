@@ -1,16 +1,18 @@
 {%- comment -%}
   Auto-discovers every image in <dir>/gallery/ (sorted by file name) and its
   thumbnail in <dir>/gallery/thumbs/. To add a picture, drop it in both folders
-  (see tools/optimize_image.py). Usage: {% include gallery.html dir=img_dir title=page.title %}
+  (see tools/optimize_image.py). Usage: {% include gallery.html dir=img_dir %}
 {%- endcomment -%}
 {%- assign gallery_dir = include.dir | append: 'gallery/' -%}
 {%- assign thumbs_dir = gallery_dir | append: 'thumbs/' -%}
 {%- assign files = site.static_files | where_exp: "f", "f.path contains gallery_dir" | sort: 'path' -%}
 {%- assign count = 0 -%}
 {%- for f in files -%}{%- unless f.path contains '/thumbs/' -%}{%- assign count = count | plus: 1 -%}{%- endunless -%}{%- endfor -%}
+{%- assign title_fr = page.title_fr | default: page.title -%}
+{%- assign title_es = page.title_es | default: page.title -%}
 {% if count > 0 %}
 <section class="container gallery-section" aria-labelledby="gallery-title">
-  <h2 id="gallery-title" class="section-title">Galerie du projet</h2>
+  <h2 id="gallery-title" class="section-title">{% include t.html key="gallery" %}</h2>
   <ul class="gallery">
     {%- assign n = 0 -%}
     {% for f in files %}
@@ -18,7 +20,7 @@
       {%- assign n = n | plus: 1 -%}
       <li>
         <a class="gallery-item" href="{{ f.path | relative_url }}" data-lightbox>
-          <img src="{{ thumbs_dir | append: f.name | relative_url }}" alt="{{ include.title }} — image {{ n }} sur {{ count }}" loading="lazy" decoding="async">
+          <img src="{{ thumbs_dir | append: f.name | relative_url }}" alt="{{ page.title | escape }} — image {{ n }} of {{ count }}" data-alt-fr="{{ title_fr | escape }} — image {{ n }} sur {{ count }}" data-alt-es="{{ title_es | escape }} — imagen {{ n }} de {{ count }}" loading="lazy" decoding="async">
         </a>
       </li>
       {%- endunless -%}

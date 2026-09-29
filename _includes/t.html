@@ -1,0 +1,24 @@
+{%- comment -%}
+  Prints a text in the three languages; CSS shows only the selected one.
+  - Interface text:  {% include t.html key="about_title" %}   (from _data/i18n.yml)
+  - Content field:   {% include t.html obj=page field="summary" %}
+    reads `summary` (English), `summary_fr` and `summary_es`. A missing
+    translation falls back to English; a field with no translation is printed as is.
+  Add md=true to render the text as Markdown (block content).
+{%- endcomment -%}
+{%- if include.key -%}
+  {%- assign t_map = site.data.i18n[include.key] -%}
+  {%- assign t_en = t_map.en -%}{%- assign t_fr = t_map.fr -%}{%- assign t_es = t_map.es -%}
+{%- else -%}
+  {%- assign t_ffr = include.field | append: '_fr' -%}
+  {%- assign t_fes = include.field | append: '_es' -%}
+  {%- assign t_en = include.obj[include.field] -%}{%- assign t_fr = include.obj[t_ffr] -%}{%- assign t_es = include.obj[t_fes] -%}
+{%- endif -%}
+{%- assign t_fr = t_fr | default: t_en -%}{%- assign t_es = t_es | default: t_en -%}
+{%- if include.md -%}
+<div class="i18n" lang="en">{{ t_en | markdownify }}</div><div class="i18n" lang="fr">{{ t_fr | markdownify }}</div><div class="i18n" lang="es">{{ t_es | markdownify }}</div>
+{%- elsif t_fr == t_en and t_es == t_en -%}
+{{ t_en }}
+{%- else -%}
+<span class="i18n" lang="en">{{ t_en }}</span><span class="i18n" lang="fr">{{ t_fr }}</span><span class="i18n" lang="es">{{ t_es }}</span>
+{%- endif -%}

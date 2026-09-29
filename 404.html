@@ -1,12 +1,14 @@
 ---
-title: Page introuvable
+title: Page not found
+title_fr: Page introuvable
+title_es: Página no encontrada
 permalink: /404.html
 sitemap: false
 ---
 <section class="page-header">
   <div class="container">
-    <h1>Page introuvable</h1>
-    <p class="page-tagline">Cette page n'existe pas (ou plus).</p>
-    <p><a class="button" href="{{ '/' | relative_url }}">Retour à l'accueil</a></p>
+    <h1>{% include t.html obj=page field="title" %}</h1>
+    <p class="page-tagline">{% include t.html key="not_found_text" %}</p>
+    <p><a class="button" href="{{ '/' | relative_url }}">{% include t.html key="back_home" %}</a></p>
   </div>
 </section>

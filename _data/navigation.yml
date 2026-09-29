@@ -1,7 +1,14 @@
-# Main menu. The "Projets" dropdown is generated from the _projects collection.
-- title: Accueil
+# Main menu. The "Projects" dropdown is generated from the _projects collection.
+# `title` is English; `title_fr` / `title_es` are the translations.
+- title: Home
+  title_fr: Accueil
+  title_es: Inicio
   url: /
-- title: Esprit
+- title: Mindset
+  title_fr: Esprit
+  title_es: Espíritu
   url: /esprit/
-- title: Parcours
+- title: Background
+  title_fr: Parcours
+  title_es: Trayectoria
   url: /parcours/

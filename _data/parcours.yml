@@ -1,51 +1,103 @@
 # Content of the /parcours/ page. Images live in assets/img/parcours/.
+# Plain fields are English; `_fr` / `_es` are the translations.
 insa:
-  title: Cursus Ingénieur Informatique à l'INSA Rennes
+  title: Computer Science Engineering Degree at INSA Rennes
+  title_fr: Cursus Ingénieur Informatique à l'INSA Rennes
+  title_es: Carrera de Ingeniería Informática en el INSA Rennes
   logo: insa
   highlights:
-    - Déléguée de groupe pendant trois ans, spécialité Médias et Interactions (conception d'outils d'interaction adaptés aux besoins des utilisateurs).
-    - Cursus informatique fait en parallèle d'un panel d'enseignements d'humanités visant à sensibiliser à différentes problématiques qu'un ingénieur pourrait rencontrer.
-  projects_title: Quelques exemples de projets et réalisations
+    - text: Class representative for three years, Media and Interaction specialization (designing interaction tools tailored to users' needs).
+      text_fr: Déléguée de groupe pendant trois ans, spécialité Médias et Interactions (conception d'outils d'interaction adaptés aux besoins des utilisateurs).
+      text_es: Delegada de grupo durante tres años, especialidad Medios e Interacciones (diseño de herramientas de interacción adaptadas a las necesidades de los usuarios).
+    - text: A computer science curriculum taken alongside a range of humanities courses designed to raise awareness of the various issues an engineer may face.
+      text_fr: Cursus informatique fait en parallèle d'un panel d'enseignements d'humanités visant à sensibiliser à différentes problématiques qu'un ingénieur pourrait rencontrer.
+      text_es: Formación en informática cursada en paralelo con un conjunto de asignaturas de humanidades destinadas a sensibilizar sobre las distintas problemáticas que puede encontrar un ingeniero.
+  projects_title: A few examples of projects and achievements
+  projects_title_fr: Quelques exemples de projets et réalisations
+  projects_title_es: Algunos ejemplos de proyectos y logros
   projects:
-    - title: Projet de jeu contrôlé grâce à un Leap Motion
-    - title: Projet de création d'un outil d'extraction d'informations d'images
+    - title: Game controlled with a Leap Motion
+      title_fr: Projet de jeu contrôlé grâce à un Leap Motion
+      title_es: Juego controlado con un Leap Motion
+      image: amrg.png
+    - title: Tool for extracting information from images
+      title_fr: Projet de création d'un outil d'extraction d'informations d'images
+      title_es: Herramienta de extracción de información de imágenes
       image: extraction-images.jpg
-    - title: Projet de bagues d'aide au déplacement de personnes en situation de handicap
+    - title: Rings to help people with disabilities get around
+      title_fr: Projet de bagues d'aide au déplacement de personnes en situation de handicap
+      title_es: Anillos de ayuda a la movilidad para personas con discapacidad
       image: bagues.jpg
-    - title: Projet d'affichage de données relatives à des débits de rivières
+    - title: Displaying river flow data
+      title_fr: Projet d'affichage de données relatives à des débits de rivières
+      title_es: Visualización de datos de caudales de ríos
       image: debits-rivieres.jpg
-    - title: Projet de création d'un langage dédié à la classification en machine learning
+    - title: A domain-specific language for machine learning classification
+      title_fr: Projet de création d'un langage dédié à la classification en machine learning
+      title_es: Lenguaje específico de dominio para la clasificación en aprendizaje automático
       image: langage-ml.jpg
 
 unal:
-  title: Université Nationale de Colombie
+  title: National University of Colombia
+  title_fr: Université Nationale de Colombie
+  title_es: Universidad Nacional de Colombia
   logo: unal
   highlights:
-    - Semestre d'échange en ingénierie informatique, immersion complète en espagnol
-  courses_title: Enseignements
+    - text: Exchange semester in computer engineering, fully immersed in Spanish
+      text_fr: Semestre d'échange en ingénierie informatique, immersion complète en espagnol
+      text_es: Semestre de intercambio en ingeniería informática, inmersión total en español
+  courses_title: Courses
+  courses_title_fr: Enseignements
+  courses_title_es: Asignaturas
   courses:
-    - text: Informatique visuelle (évaluation par projet)
+    - text: Visual computing (project-based assessment)
+      text_fr: Informatique visuelle (évaluation par projet)
+      text_es: Computación visual (evaluación por proyecto)
       url: https://visualcomputing2023-1.github.io/Showcase/
-    - text: Langages de programmation, compilation (évaluation par divers projets et exposé)
-    - text: Cryptographie (évaluation par projet, test, exposé)
-    - text: Programmation parallèle (évaluation par devoir surveillé, TP, présentation)
+    - text: Programming languages, compilers (assessed through several projects and a presentation)
+      text_fr: Langages de programmation, compilation (évaluation par divers projets et exposé)
+      text_es: Lenguajes de programación, compilación (evaluación mediante varios proyectos y una exposición)
+    - text: Cryptography (project, test, presentation)
+      text_fr: Cryptographie (évaluation par projet, test, exposé)
+      text_es: Criptografía (evaluación por proyecto, examen y exposición)
+    - text: Parallel programming (exam, lab work, presentation)
+      text_fr: Programmation parallèle (évaluation par devoir surveillé, TP, présentation)
+      text_es: Programación paralela (evaluación por examen, prácticas y presentación)
   projects:
-    - title: Modélisation 3D du système Soleil-Terre-Lune en p5.js
+    - title: 3D model of the Sun-Earth-Moon system in p5.js
+      title_fr: Modélisation 3D du système Soleil-Terre-Lune en p5.js
+      title_es: Modelado 3D del sistema Sol-Tierra-Luna en p5.js
       image: soleil-terre-lune.jpg
-    - title: Programmation d'algorithmes basiques de cryptographie
+    - title: Programming basic cryptography algorithms
+      title_fr: Programmation d'algorithmes basiques de cryptographie
+      title_es: Programación de algoritmos básicos de criptografía
       image: cryptographie.jpg
-    - title: Génération aléatoire de terrain en p5.js
+    - title: Random terrain generation in p5.js
+      title_fr: Génération aléatoire de terrain en p5.js
+      title_es: Generación aleatoria de terreno en p5.js
       image: terrain.jpg
-    - title: Projet de développement d'un traducteur de Python à Go
+    - title: Developing a Python-to-Go translator
+      title_fr: Projet de développement d'un traducteur de Python à Go
+      title_es: Desarrollo de un traductor de Python a Go
       image: python-go.jpg
 
-associations_title: Associations et points marquants de mon parcours
+associations_title: Student associations and highlights of my journey
+associations_title_fr: Associations et points marquants de mon parcours
+associations_title_es: Asociaciones y momentos destacados de mi trayectoria
 associations:
   - logo: insa-carre
-    text: Déléguée en filière internationale (FIRE), binômes de travail francophone / non-francophone.
+    text: Class representative in the international track (FIRE), with French-speaking / non-French-speaking work pairs.
+    text_fr: Déléguée en filière internationale (FIRE), binômes de travail francophone / non-francophone.
+    text_es: Delegada en el itinerario internacional (FIRE), con parejas de trabajo francófonas / no francófonas.
   - logo: bear
-    text: Club BEAR - Association d'accueil et d'intégration des étudiants étrangers au sein de l'INSA - Responsable événements
+    text: Club BEAR - Association welcoming and integrating international students at INSA - Events manager
+    text_fr: Club BEAR - Association d'accueil et d'intégration des étudiants étrangers au sein de l'INSA - Responsable événements
+    text_es: Club BEAR - Asociación de acogida e integración de estudiantes extranjeros en el INSA - Responsable de eventos
   - logo: forum-grand-ouest
-    text: Forum Grand Ouest - Forum étudiant de recrutement en ingénierie et management - Chargée de communication sur les réseaux sociaux
+    text: Forum Grand Ouest - Student recruitment fair for engineering and management - Social media communications officer
+    text_fr: Forum Grand Ouest - Forum étudiant de recrutement en ingénierie et management - Chargée de communication sur les réseaux sociaux
+    text_es: Forum Grand Ouest - Foro estudiantil de empleo en ingeniería y gestión - Encargada de comunicación en redes sociales
   - logo: club-photo
-    text: Club Photo - Photographe lors d'événements de l'INSA (Gala, festival Rock & Solex, ...)
+    text: Photo Club - Photographer at INSA events (Gala, Rock & Solex festival, ...)
+    text_fr: Club Photo - Photographe lors d'événements de l'INSA (Gala, festival Rock & Solex, ...)
+    text_es: Club de fotografía - Fotógrafa en eventos del INSA (Gala, festival Rock & Solex, ...)

@@ -8,26 +8,35 @@
       <span class="nav-toggle-bars" aria-hidden="true"></span>
     </button>
 
-    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+    <nav id="site-nav" class="site-nav" {% include ta.html a="aria-label" key="nav_main" %}>
       <ul class="nav-list">
         {% for item in site.data.navigation %}
           <li>
-            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{% include t.html obj=item field="title" %}</a>
           </li>
         {% endfor %}
         <li class="nav-projects">
           <details>
-            <summary{% if page.collection == 'projects' %} class="is-active"{% endif %}>Projets</summary>
-            <ul class="nav-sub">
-              {% for p in projects %}
-                <li>
-                  <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
-                </li>
-              {% endfor %}
-            </ul>
+            <summary{% if page.collection == 'projects' %} class="is-active"{% endif %}>{% include t.html key="nav_projects" %}</summary>
+            <div class="nav-panel">
+              <ul class="nav-sub">
+                {% for p in projects %}
+                  {%- if p.nav_title -%}{%- assign field = 'nav_title' -%}{%- else -%}{%- assign field = 'title' -%}{%- endif -%}
+                  <li>
+                    <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{% include t.html obj=p field=field %}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </div>
           </details>
         </li>
       </ul>
     </nav>
+
+    <div class="lang-switch" role="group" {% include ta.html a="aria-label" key="language" %}>
+      <button type="button" data-set-lang="en" lang="en" title="English">EN</button>
+      <button type="button" data-set-lang="fr" lang="fr" title="Français">FR</button>
+      <button type="button" data-set-lang="es" lang="es" title="Español">ES</button>
+    </div>
   </div>
 </header>

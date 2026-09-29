@@ -1,12 +1,14 @@
 ---
-title: Mon parcours
+title: My background
+title_fr: Mon parcours
+title_es: Mi trayectoria
 permalink: /parcours/
 ---
 {%- assign parcours = site.data.parcours -%}
 {%- assign img_dir = '/assets/img/parcours/' -%}
 <section class="page-header">
   <div class="container">
-    <h1>{{ page.title }}</h1>
+    <h1>{% include t.html obj=page field="title" %}</h1>
   </div>
 </section>
 
@@ -19,22 +21,22 @@ permalink: /parcours/
       <div class="school-header reveal">
         <img class="school-logo" src="{{ '/assets/img/logos/' | append: school.logo | append: '.png' | relative_url }}" alt="{{ org.name }}">
         <div>
-          <h2 id="school-{{ key }}" class="section-title">{{ school.title }}</h2>
-          {% for h in school.highlights %}<p>{{ h }}</p>{% endfor %}
+          <h2 id="school-{{ key }}" class="section-title">{% include t.html obj=school field="title" %}</h2>
+          {% for h in school.highlights %}<p>{% include t.html obj=h field="text" %}</p>{% endfor %}
         </div>
       </div>
 
       {% if school.courses %}
-        <h3 class="subsection-title">{{ school.courses_title }}</h3>
+        <h3 class="subsection-title">{% include t.html obj=school field="courses_title" %}</h3>
         <ul class="course-list">
           {% for c in school.courses %}
-            <li>{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.text }}</a>{% else %}{{ c.text }}{% endif %}</li>
+            <li>{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{% include t.html obj=c field="text" %}</a>{% else %}{% include t.html obj=c field="text" %}{% endif %}</li>
           {% endfor %}
         </ul>
       {% endif %}
 
       {% if school.projects %}
-        {% if school.projects_title %}<h3 class="subsection-title">{{ school.projects_title }}</h3>{% endif %}
+        {% if school.projects_title %}<h3 class="subsection-title">{% include t.html obj=school field="projects_title" %}</h3>{% endif %}
         <ul class="mini-grid">
           {% for p in school.projects %}
             <li class="mini-card reveal">
@@ -44,7 +46,7 @@ permalink: /parcours/
               {% else %}
                 <span class="mini-card-media is-empty" aria-hidden="true"></span>
               {% endif %}
-              <p>{{ p.title }}</p>
+              <p>{% include t.html obj=p field="title" %}</p>
             </li>
           {% endfor %}
         </ul>
@@ -55,13 +57,13 @@ permalink: /parcours/
 
 <section class="section" aria-labelledby="assos-title">
   <div class="container">
-    <h2 id="assos-title" class="section-title">{{ parcours.associations_title }}</h2>
+    <h2 id="assos-title" class="section-title">{% include t.html obj=parcours field="associations_title" %}</h2>
     <ul class="assos">
       {% for a in parcours.associations %}
         {%- assign org = site.data.organizations[a.logo] -%}
         <li class="reveal">
           <img src="{{ '/assets/img/logos/' | append: a.logo | append: '.png' | relative_url }}" alt="{{ org.name }}" loading="lazy">
-          <p>{{ a.text }}</p>
+          <p>{% include t.html obj=a field="text" %}</p>
         </li>
       {% endfor %}
     </ul>

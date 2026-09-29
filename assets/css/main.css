@@ -64,7 +64,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
-.narrow { max-width: 760px; }
+/* Readable line length, but on the same left edge as the rest of the page. */
+.narrow > * { max-width: 760px; }
 
 .sr-only {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -76,6 +77,11 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   background: var(--text); color: var(--bg); padding: 8px 14px; border-radius: var(--radius);
 }
 .skip-link:focus { top: 12px; }
+
+/* Every text exists in each language; show only the one set on <html lang>. */
+html:not([lang="en"]) .i18n[lang="en"],
+html:not([lang="fr"]) .i18n[lang="fr"],
+html:not([lang="es"]) .i18n[lang="es"] { display: none; }
 
 .icon { width: 1.25em; height: 1.25em; flex: none; }
 .icon-sm { width: 1em; height: 1em; vertical-align: -0.12em; }
@@ -140,6 +146,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 
 .brand { color: var(--text); text-decoration: none; font-size: 1.15rem; }
 
+.site-nav { margin-left: auto; }
+
 .nav-list { display: flex; align-items: center; gap: clamp(16px, 3vw, 36px); }
 
 .nav-list a,
@@ -170,9 +178,12 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 }
 .nav-projects details[open] summary::after { transform: rotate(-135deg); margin-top: 3px; }
 
+/* The panel's top padding bridges the gap under "Projects" so hovering across it keeps the menu open. */
+.nav-panel { position: absolute; right: 0; top: 100%; padding-top: 14px; }
 .nav-sub {
-  position: absolute; right: 0; top: calc(100% + 14px);
-  min-width: 240px; padding: 8px;
+  position: relative; min-width: 260px; padding: 8px;
+  max-height: min(15rem, 70vh); overflow-y: auto; overscroll-behavior: contain;
+  scrollbar-width: thin; scrollbar-color: rgba(255, 255, 255, 0.25) transparent;
   background: var(--bg-raised); border: 1px solid var(--line); border-radius: var(--radius);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
@@ -181,6 +192,21 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   letter-spacing: 0.08em;
 }
 .nav-sub a:hover, .nav-sub a[aria-current="page"] { background: var(--surface); color: var(--text); }
+
+.lang-switch {
+  display: flex; gap: 2px;
+  margin-left: clamp(16px, 2.5vw, 28px); padding-left: clamp(12px, 2vw, 20px);
+  border-left: 1px solid var(--line);
+}
+html:not(.js) .lang-switch { display: none; }
+.lang-switch button {
+  background: none; border: 0; cursor: pointer;
+  padding: 6px 6px; font-family: var(--sans); font-size: 0.75rem; letter-spacing: 0.12em;
+  color: var(--text-faint); border-bottom: 1px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lang-switch button:hover { color: var(--text); }
+.lang-switch button[aria-pressed="true"] { color: var(--text); border-bottom-color: var(--accent); }
 
 .nav-toggle {
   display: none; width: 44px; height: 44px; margin-right: -10px;
@@ -212,7 +238,10 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   .nav-list { flex-direction: column; align-items: stretch; gap: 0; padding: 8px var(--gutter) 20px; }
   .nav-list > li { border-bottom: 1px solid var(--line); }
   .nav-list a, .nav-projects summary { display: flex; padding-block: 14px; border-bottom: 0; }
-  .nav-sub { position: static; min-width: 0; padding: 0 0 8px 12px; background: none; border: 0; box-shadow: none; }
+  .nav-panel { position: static; padding: 0; }
+  .nav-sub { min-width: 0; max-height: none; overflow: visible; padding: 0 0 8px 12px; background: none; border: 0; box-shadow: none; }
+  .lang-switch { margin-left: auto; margin-right: 4px; padding-left: 0; border-left: 0; }
+  .nav-toggle { order: 3; }
 }
 
 /* ---------- Home ---------- */
@@ -334,7 +363,8 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 
 .link-list li + li { margin-top: 6px; }
 
-.prose { max-width: 820px; margin-inline: auto; }
+/* Same left edge as the title and summary; each block keeps a readable line length. */
+.prose > * { max-width: 820px; }
 .prose h2 {
   font-size: clamp(1.5rem, 2.8vw, 2rem); margin-top: 2.2em;
   padding-top: 0.2em; position: relative;
@@ -343,7 +373,10 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
   content: ""; display: block; width: 40px; height: 2px;
   background: var(--accent); margin-bottom: 0.7em;
 }
-.prose h2:first-child { margin-top: 0; }
+.prose > h2:first-child,
+.prose > .i18n:first-child > h2:first-child,
+.prose > .i18n:first-child + .i18n > h2:first-child,
+.prose > .i18n:first-child + .i18n + .i18n > h2:first-child { margin-top: 0; }
 .prose p, .prose li { color: var(--text-muted); }
 .prose strong { color: var(--text); font-weight: 400; font-style: italic; }
 .prose ul { margin: 0 0 1em; }

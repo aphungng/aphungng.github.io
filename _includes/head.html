@@ -2,7 +2,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#000000">
 <meta name="color-scheme" content="dark">
-<script>document.documentElement.classList.add("js")</script>
+{%- comment -%} English by default; ?lang=fr|es or a previous choice switches before the page is drawn. {%- endcomment %}
+<script>(function(d){var l;try{l=new URLSearchParams(location.search).get("lang")||localStorage.getItem("lang")}catch(e){}if(l==="fr"||l==="es")d.lang=l;d.classList.add("js")})(document.documentElement)</script>
 {% seo %}
 <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">

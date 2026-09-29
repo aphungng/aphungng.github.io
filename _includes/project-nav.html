@@ -5,19 +5,19 @@
     {%- assign next_index = forloop.index0 | plus: 1 -%}
   {%- endif -%}
 {%- endfor -%}
-<nav class="container project-nav" aria-label="Autres projets">
+<nav class="container project-nav" {% include ta.html a="aria-label" key="other_projects" %}>
   {% if prev_index >= 0 %}
     {% assign prev = projects[prev_index] %}
     <a class="project-nav-link prev" href="{{ prev.url | relative_url }}">
-      <span class="project-nav-label">{% include icon.html name="arrow-left" %} Projet précédent</span>
-      <span class="project-nav-title">{{ prev.title }}</span>
+      <span class="project-nav-label">{% include icon.html name="arrow-left" %} {% include t.html key="prev_project" %}</span>
+      <span class="project-nav-title">{% include t.html obj=prev field="title" %}</span>
     </a>
   {% else %}<span></span>{% endif %}
   {% if next_index < projects.size %}
     {% assign next = projects[next_index] %}
     <a class="project-nav-link next" href="{{ next.url | relative_url }}">
-      <span class="project-nav-label">Projet suivant {% include icon.html name="arrow-right" %}</span>
-      <span class="project-nav-title">{{ next.title }}</span>
+      <span class="project-nav-label">{% include t.html key="next_project" %} {% include icon.html name="arrow-right" %}</span>
+      <span class="project-nav-title">{% include t.html obj=next field="title" %}</span>
     </a>
   {% endif %}
 </nav>

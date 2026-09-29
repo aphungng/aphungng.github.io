@@ -1,0 +1,102 @@
+# Interface text in every language. Used with {% include t.html key="..." %}
+# (visible text) or {% include ta.html a="aria-label" key="..." %} (attributes).
+skip:
+  en: Skip to content
+  fr: Aller au contenu
+  es: Ir al contenido
+nav_main:
+  en: Main navigation
+  fr: Navigation principale
+  es: Navegación principal
+nav_projects:
+  en: Projects
+  fr: Projets
+  es: Proyectos
+language:
+  en: Language
+  fr: Langue
+  es: Idioma
+social:
+  en: Social networks
+  fr: Réseaux
+  es: Redes sociales
+updated:
+  en: "Last updated:"
+  fr: "Mise à jour :"
+  es: "Última actualización:"
+about_title:
+  en: About me
+  fr: À propos de moi
+  es: Sobre mí
+learn_more:
+  en: Learn more
+  fr: En savoir +
+  es: Saber más
+portrait_of:
+  en: Portrait of
+  fr: Portrait de
+  es: Retrato de
+my_path:
+  en: My background
+  fr: Mon parcours
+  es: Mi trayectoria
+education:
+  en: Education
+  fr: Formation
+  es: Formación
+my_projects:
+  en: My projects
+  fr: Mes projets
+  es: Mis proyectos
+contact:
+  en: Contact & information
+  fr: Contact & informations
+  es: Contacto e información
+passions:
+  en: Passions
+  fr: Passions
+  es: Pasiones
+project_info:
+  en: Project information
+  fr: Informations sur le projet
+  es: Información del proyecto
+tools:
+  en: Tools
+  fr: Outils
+  es: Herramientas
+collab:
+  en: In collaboration with
+  fr: En collaboration avec
+  es: En colaboración con
+links:
+  en: Links
+  fr: Liens
+  es: Enlaces
+gallery:
+  en: Project gallery
+  fr: Galerie du projet
+  es: Galería del proyecto
+other_projects:
+  en: Other projects
+  fr: Autres projets
+  es: Otros proyectos
+prev_project:
+  en: Previous project
+  fr: Projet précédent
+  es: Proyecto anterior
+next_project:
+  en: Next project
+  fr: Projet suivant
+  es: Proyecto siguiente
+play_video:
+  en: Play video
+  fr: Lire la vidéo
+  es: Reproducir el vídeo
+not_found_text:
+  en: This page doesn't exist (or no longer exists).
+  fr: Cette page n'existe pas (ou plus).
+  es: Esta página no existe (o ya no existe).
+back_home:
+  en: Back to home
+  fr: Retour à l'accueil
+  es: Volver al inicio

@@ -1,7 +1,18 @@
-# "Formation" timeline on the home page, most recent first.
-- school: INSA Rennes, cycle ingénieur informatique
-  detail: Spécialité Médias et interactions (réalité virtuelle, informatique graphique, traitement d'images, ...)
+# "Education" timeline on the home page, most recent first.
+# `school` / `detail` are English; `_fr` / `_es` are the translations.
+- school: INSA Rennes, Master of Science in Computer Science and Software Engineering
+  school_fr: INSA Rennes, Diplôme d'ingénieure informatique
+  school_es: INSA Rennes, Maestría de ingeniería informática
+  detail: Media and Interaction specialization (virtual reality, computer graphics, image processing, ...)
+  detail_fr: Spécialité Médias et interactions (réalité virtuelle, informatique graphique, traitement d'images, ...)
+  detail_es: Especialidad Medios e Interacciones (realidad virtual, informática gráfica, procesamiento de imágenes, ...)
 - school: Universidad Nacional de Colombia
-  detail: Semestre d'échange en Colombie en filière Informatique, avec cours en espagnol
-- school: INSA Rennes, cycle préparatoire ingénieur
-  detail: Filière internationale (binômes francophones / non francophones), déléguée de mon groupe
+  detail: Exchange semester in Colombia in computer science, with courses taught in Spanish
+  detail_fr: Semestre d'échange en Colombie en filière Informatique, avec cours en espagnol
+  detail_es: Semestre de intercambio en Colombia en la carrera de Sistemas, con clases en español
+- school: INSA Rennes, preparatory engineering program
+  school_fr: INSA Rennes, cycle préparatoire ingénieur
+  school_es: INSA Rennes, ciclo preparatorio de ingeniería
+  detail: International track (French-speaking / non-French-speaking pairs), class representative
+  detail_fr: Filière internationale (binômes francophones / non francophones), déléguée de mon groupe
+  detail_es: Itinerario internacional (parejas francófonas / no francófonas), delegada de mi grupo

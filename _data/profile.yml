@@ -1,7 +1,11 @@
+# Translatable fields: the plain name is English, `_fr` / `_es` are the translations.
 name: Alice Phung-Ngoc
-headline: Ingénieure en informatique – Spécialisation en 3D et réalité virtuelle
+headline: Computer science engineer – Specialized in 3D and virtual reality
+headline_fr: Ingénieure en informatique – Spécialisation en 3D et réalité virtuelle
+headline_es: Ingeniera informática – Especialización en 3D y realidad virtual
 photo: /assets/img/profile.jpg
 location: France
+location_es: Francia
 email: alice.phung.ngoc@gmail.com
 cv: https://drive.google.com/file/d/1PCnqVQBDkFZg1_hHOz1ipD8VdHchdKLG/view?usp=sharing
 github:
@@ -11,9 +15,21 @@ linkedin:
   label: Alice Phung
   url: https://www.linkedin.com/in/alice-phung-849010197/
 about: >-
+  A MSc in computer engineering graduate from the Institut National des Sciences
+  Appliquées (INSA) in Rennes, I am currently looking for an engineering position
+  related to 3D imaging or extended reality. Committed, creative and reliable, I
+  enjoy working as part of a team to tackle the challenges at hand.
+about_fr: >-
   Diplômée ingénieure informatique de l'Institut National des Sciences Appliquées
   de Rennes, je suis actuellement en recherche d'un poste d'ingénieure en relation
   avec l'imagerie 3D ou le monde de la réalité étendue. Impliquée, créative et
   sérieuse, j'aime avancer en équipe sur des problématiques données.
-# Shown in the footer — update when you change the content.
-updated: février 2025
+about_es: >-
+  Titulada con una Maestría de ingeniería informática por el Institut National des Sciences
+  Appliquées (INSA) de Rennes, busco un puesto de ingeniera relacionado
+  con la imagen 3D o el mundo de la realidad extendida. Comprometida, creativa y
+  rigurosa, me gusta avanzar en equipo para resolver los retos planteados.
+# Shown in the footer — update when changing the content.
+updated: September 2026
+updated_fr: Septembre 2025
+updated_es: Septiembre 2025

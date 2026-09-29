@@ -1,8 +1,8 @@
 # Site settings — built by GitHub Pages (Jekyll 3.x) on every push.
 title: Alice Phung-Ngoc
-description: Ingénieure en informatique – Spécialisation en 3D et réalité virtuelle
-lang: fr
-locale: fr_FR
+description: Computer science engineer – Specialized in 3D and virtual reality
+lang: en
+locale: en_US
 author: Alice Phung-Ngoc
 
 # If the repository is named <user>.github.io, leave baseurl empty.

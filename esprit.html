@@ -1,22 +1,24 @@
 ---
-title: Mon esprit
+title: My mindset
+title_fr: Mon esprit
+title_es: Mi espíritu
 permalink: /esprit/
 ---
 {%- assign esprit = site.data.esprit -%}
 <section class="page-header">
   <div class="container">
-    <h1>{{ page.title }}</h1>
-    <p class="page-tagline">{{ esprit.tagline }}</p>
+    <h1>{% include t.html obj=page field="title" %}</h1>
+    <p class="page-tagline">{% include t.html obj=esprit field="tagline" %}</p>
   </div>
 </section>
 
 <section class="section">
   <div class="container narrow">
-    <p class="lead">{{ site.data.profile.about }}</p>
+    <p class="lead">{% include t.html obj=site.data.profile field="about" %}</p>
   </div>
 </section>
 
-<section class="section" aria-label="Passions">
+<section class="section" {% include ta.html a="aria-label" key="passions" %}>
   <div class="container">
     <ul class="passions">
       {% for item in esprit.passions %}
@@ -25,7 +27,7 @@ permalink: /esprit/
             {% if item.icon %}
               <img class="passion-icon" src="{{ '/assets/img/esprit/icons/' | append: item.icon | append: '.png' | relative_url }}" alt="" width="64" height="64">
             {% endif %}
-            <p>{{ item.text }}</p>
+            <p>{% include t.html obj=item field="text" %}</p>
           </div>
           <div class="passion-photos">
             {% for photo in item.photos %}

@@ -1,20 +1,40 @@
 # Content of the /esprit/ page. Images live in assets/img/esprit/.
-tagline: J'aime beaucoup découvrir de nouvelles manières de créer.
+# Plain fields are English; `_fr` / `_es` are the translations.
+tagline: I love discovering new ways to create.
+tagline_fr: J'aime découvrir de nouvelles manières de créer.
+tagline_es: Me encanta descubrir nuevas formas de crear.
 passions:
   - icon: pinceau
-    text: Passion pour les activités manuelles et créatives (peinture, dessin, art graphique).
-    photos: [tableaux.jpg, carte-peinte.jpg]
+    text: A passion for crafts and creative activities (painting, drawing, graphic art).
+    text_fr: Passion pour les activités manuelles et créatives (peinture, dessin, art graphique).
+    text_es: Pasión por las manualidades y las actividades creativas (pintura, dibujo, arte gráfico).
+    photos: [tableaux.jpg, bird_painting.jpg, carte-peinte.jpg]
+  - icon: dance 
+    text: A love for social dancing and latin dances (salsa, bachata, and more to come).
+    text_fr: Un amour de la danse sociale et plus particulièrement pour les danses latines (salsa, bachata, et d'autres à venir).
+    text_es: Un amor por los sociales de baile, y especialment por los bailes latinos (salsa, bachata, y prontamente otros).
+    photos: [tableaux.jpg]
   - icon: musique
-    text: Harpe au Conservatoire de Rennes pendant 8 ans, guitare et piano en autodidacte.
+    text: Harp at the Rennes Conservatory for 8 years, self-taught guitar and piano.
+    text_fr: Harpe au Conservatoire de Rennes pendant 8 ans, guitare et piano en autodidacte.
+    text_es: Arpa en el Conservatorio de Rennes durante 8 años, guitarra y piano de forma autodidacta.
     photos: [guitare.jpg]
   - icon: echecs
-    text: Pratique des échecs en individuel et équipe pendant 8 ans, compétitions à niveau départemental, régional et national.
+    text: Played chess individually and in teams for 8 years, competing at departmental, regional and national level.
+    text_fr: Pratique des échecs en individuel et équipe pendant 8 ans, compétitions à niveau départemental, régional et national.
+    text_es: Práctica del ajedrez individual y por equipos durante 8 años, con competiciones a nivel departamental, regional y nacional.
     photos: [echecs.jpg]
   - icon: photo
-    text: Photographe amateure et détentrice d'une licence de pilote de drone.
+    text: Amateur photographer and licensed drone pilot.
+    text_fr: Photographe amateure et détentrice d'une licence de pilote de drone.
+    text_es: Fotógrafa aficionada y con licencia de piloto de dron.
     photos: [concert.jpg]
   - icon: patisserie
-    text: Pâtissière en développement.
+    text: Pastry chef in the making.
+    text_fr: Pâtissière en développement.
+    text_es: Pastelera en formación.
     photos: [tarte.jpg]
-  - text: "... et fun fact : j'adore les poules !"
+  - text: "... and fun fact: I love chickens!"
+    text_fr: "... et fun fact : j'adore les poules !"
+    text_es: "... y dato curioso: ¡me encantan las gallinas!"
     photos: [poule.jpg]

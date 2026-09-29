@@ -1,0 +1,6 @@
+{%- comment -%}
+  Prints a translated attribute: English value plus data-<attr>-fr / -es,
+  which main.js swaps in. Usage: <nav {% include ta.html a="aria-label" key="nav_main" %}>
+{%- endcomment -%}
+{%- assign ta_map = site.data.i18n[include.key] -%}
+{{ include.a }}="{{ ta_map.en | escape }}" data-{{ include.a }}-fr="{{ ta_map.fr | escape }}" data-{{ include.a }}-es="{{ ta_map.es | escape }}"
