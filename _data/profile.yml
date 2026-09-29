@@ -3,11 +3,11 @@ name: Alice Phung-Ngoc
 headline: Computer science engineer – Specialized in 3D and virtual reality
 headline_fr: Ingénieure en informatique – Spécialisation en 3D et réalité virtuelle
 headline_es: Ingeniera informática – Especialización en 3D y realidad virtual
-photo: /assets/img/profile.jpg
+#photo: /assets/img/profile.jpg
 location: France
 location_es: Francia
 email: alice.phung.ngoc@gmail.com
-cv: https://drive.google.com/file/d/1PCnqVQBDkFZg1_hHOz1ipD8VdHchdKLG/view?usp=sharing
+cv: https://drive.google.com/file/d/1Ls2VknqwhGLau6Wugn1nczgknbMO9DiZ/view?usp=sharing
 github:
   user: aphungng
   url: https://github.com/aphungng

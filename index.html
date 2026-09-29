@@ -6,7 +6,6 @@ body_class: home
 ---
 {%- assign profile = site.data.profile -%}
 {%- assign projects = site.projects | sort: 'order' -%}
-{%- assign portrait = site.data.i18n.portrait_of -%}
 
 <section class="hero">
   <div class="container">
@@ -17,8 +16,7 @@ body_class: home
 </section>
 
 <section class="section" aria-labelledby="about-title">
-  <div class="container about">
-    <img class="about-photo reveal" src="{{ profile.photo | relative_url }}" alt="{{ portrait.en }} {{ profile.name }}" data-alt-fr="{{ portrait.fr }} {{ profile.name }}" data-alt-es="{{ portrait.es }} {{ profile.name }}" width="400" height="714">
+  <div class="container">
     <div class="about-text reveal">
       <h2 id="about-title" class="section-title">{% include t.html key="about_title" %}</h2>
       <p>{% include t.html obj=profile field="about" %}</p>

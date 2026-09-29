@@ -260,16 +260,7 @@ html:not(.js) .lang-switch { display: none; }
 .hero-rule { display: block; width: 72px; height: 2px; background: var(--accent); margin-bottom: 1.4em; }
 .hero-headline { font-size: clamp(1.1rem, 2.2vw, 1.5rem); color: var(--text-muted); max-width: 34ch; margin: 0; }
 
-.about {
-  display: grid; grid-template-columns: minmax(180px, 320px) 1fr;
-  gap: clamp(28px, 6vw, 80px); align-items: center;
-}
-.about-photo { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: var(--radius); }
 .about-text p { color: var(--text-muted); max-width: 60ch; }
-@media (max-width: 640px) {
-  .about { grid-template-columns: 1fr; }
-  .about-photo { max-width: 260px; }
-}
 
 .timeline { position: relative; margin: 0 0 2rem; padding-left: 28px; }
 .timeline::before {
