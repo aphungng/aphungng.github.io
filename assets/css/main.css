@@ -501,6 +501,9 @@ html:not(.js) .lang-switch { display: none; }
   opacity: 0; transition: opacity 0.2s;
 }
 .lightbox.is-open { opacity: 1; }
+/* Without this, `display: grid` beats the hidden attribute and the closed lightbox
+   stays over the page as an invisible layer that swallows every click. */
+.lightbox[hidden] { display: none; }
 .lightbox img { max-width: 100%; max-height: calc(100vh - 112px); width: auto; object-fit: contain; border-radius: 4px; }
 .lightbox button {
   position: absolute; background: none; border: 0; color: #fff; cursor: pointer;

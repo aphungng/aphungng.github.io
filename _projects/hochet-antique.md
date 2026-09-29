@@ -19,7 +19,7 @@ links:
   - label: Detailed presentation of the application
     label_fr: Présentation détaillée de l'application
     label_es: Presentación detallada de la aplicación
-    url: https://projets-info.insa-rennes.fr/projets/2022/Hochet_Antique/
+    url: https://projets-info.insa-rennes.fr/projets/2022-2023/Hochet_Antique/
 ---
 
 {% include figures.html images="musee-1.jpg,musee-2.jpg,musee-3.jpg,musee-4.jpg" alt="Musée des Beaux-Arts de Rennes" alt_es="Museo de Bellas Artes de Rennes" %}
