@@ -1,0 +1,12 @@
+{%- comment -%}
+  A row of images from the current project's folder, openable in the lightbox.
+  Usage (in a project's Markdown): {% include figures.html images="app-1.jpg,app-2.jpg" %}
+{%- endcomment -%}
+{%- assign dir = '/assets/img/projects/' | append: page.slug | append: '/' -%}
+{%- assign names = include.images | split: ',' -%}
+<ul class="figures">
+  {% for name in names %}
+    {%- assign src = dir | append: name | strip | relative_url -%}
+    <li><a class="gallery-item" href="{{ src }}" data-lightbox><img src="{{ src }}" alt="{{ include.alt | default: page.title }}" loading="lazy" decoding="async"></a></li>
+  {% endfor %}
+</ul>

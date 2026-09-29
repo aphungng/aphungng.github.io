@@ -1,0 +1,40 @@
+---
+title: Mon esprit
+permalink: /esprit/
+---
+{%- assign esprit = site.data.esprit -%}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+    <p class="page-tagline">{{ esprit.tagline }}</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container narrow">
+    <p class="lead">{{ site.data.profile.about }}</p>
+  </div>
+</section>
+
+<section class="section" aria-label="Passions">
+  <div class="container">
+    <ul class="passions">
+      {% for item in esprit.passions %}
+        <li class="passion reveal">
+          <div class="passion-text">
+            {% if item.icon %}
+              <img class="passion-icon" src="{{ '/assets/img/esprit/icons/' | append: item.icon | append: '.png' | relative_url }}" alt="" width="64" height="64">
+            {% endif %}
+            <p>{{ item.text }}</p>
+          </div>
+          <div class="passion-photos">
+            {% for photo in item.photos %}
+              {%- assign src = '/assets/img/esprit/' | append: photo | relative_url -%}
+              <a class="gallery-item" href="{{ src }}" data-lightbox><img src="{{ src }}" alt="" loading="lazy"></a>
+            {% endfor %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

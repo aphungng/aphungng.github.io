@@ -1,0 +1,69 @@
+---
+title: Mon parcours
+permalink: /parcours/
+---
+{%- assign parcours = site.data.parcours -%}
+{%- assign img_dir = '/assets/img/parcours/' -%}
+<section class="page-header">
+  <div class="container">
+    <h1>{{ page.title }}</h1>
+  </div>
+</section>
+
+{%- assign schools = "insa,unal" | split: "," -%}
+{% for key in schools %}
+  {%- assign school = parcours[key] -%}
+  {%- assign org = site.data.organizations[school.logo] -%}
+  <section class="section school" aria-labelledby="school-{{ key }}">
+    <div class="container">
+      <div class="school-header reveal">
+        <img class="school-logo" src="{{ '/assets/img/logos/' | append: school.logo | append: '.png' | relative_url }}" alt="{{ org.name }}">
+        <div>
+          <h2 id="school-{{ key }}" class="section-title">{{ school.title }}</h2>
+          {% for h in school.highlights %}<p>{{ h }}</p>{% endfor %}
+        </div>
+      </div>
+
+      {% if school.courses %}
+        <h3 class="subsection-title">{{ school.courses_title }}</h3>
+        <ul class="course-list">
+          {% for c in school.courses %}
+            <li>{% if c.url %}<a href="{{ c.url }}" target="_blank" rel="noopener">{{ c.text }}</a>{% else %}{{ c.text }}{% endif %}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if school.projects %}
+        {% if school.projects_title %}<h3 class="subsection-title">{{ school.projects_title }}</h3>{% endif %}
+        <ul class="mini-grid">
+          {% for p in school.projects %}
+            <li class="mini-card reveal">
+              {% if p.image %}
+                {%- assign src = img_dir | append: p.image | relative_url -%}
+                <a class="gallery-item mini-card-media" href="{{ src }}" data-lightbox><img src="{{ src }}" alt="" loading="lazy"></a>
+              {% else %}
+                <span class="mini-card-media is-empty" aria-hidden="true"></span>
+              {% endif %}
+              <p>{{ p.title }}</p>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </div>
+  </section>
+{% endfor %}
+
+<section class="section" aria-labelledby="assos-title">
+  <div class="container">
+    <h2 id="assos-title" class="section-title">{{ parcours.associations_title }}</h2>
+    <ul class="assos">
+      {% for a in parcours.associations %}
+        {%- assign org = site.data.organizations[a.logo] -%}
+        <li class="reveal">
+          <img src="{{ '/assets/img/logos/' | append: a.logo | append: '.png' | relative_url }}" alt="{{ org.name }}" loading="lazy">
+          <p>{{ a.text }}</p>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

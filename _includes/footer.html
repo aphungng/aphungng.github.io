@@ -1,0 +1,12 @@
+{% assign profile = site.data.profile %}
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="footer-name">{{ profile.name }}</p>
+    <p><a href="mailto:{{ profile.email }}">{{ profile.email }}</a></p>
+    <ul class="footer-social" aria-label="Réseaux">
+      <li><a href="{{ profile.github.url }}" aria-label="GitHub">{% include icon.html name="github" %}</a></li>
+      <li><a href="{{ profile.linkedin.url }}" aria-label="LinkedIn">{% include icon.html name="linkedin" %}</a></li>
+    </ul>
+    <p class="footer-updated">Mise à jour : {{ profile.updated }}</p>
+  </div>
+</footer>

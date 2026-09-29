@@ -1,0 +1,11 @@
+{%- comment -%}
+  Privacy-friendly YouTube embed: shows the thumbnail, loads the player only on click.
+  Usage: {% include youtube.html id="naPyMYgFnXQ" title="Bande annonce" %}
+{%- endcomment -%}
+<figure class="video">
+  <button class="video-poster" type="button" data-youtube="{{ include.id }}" aria-label="Lire la vidéo{% if include.title %} : {{ include.title }}{% endif %}">
+    <img src="https://i.ytimg.com/vi/{{ include.id }}/hqdefault.jpg" alt="" loading="lazy">
+    <span class="video-play" aria-hidden="true"></span>
+  </button>
+  {% if include.title %}<figcaption>{{ include.title }}</figcaption>{% endif %}
+</figure>

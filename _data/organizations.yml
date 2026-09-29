@@ -1,0 +1,33 @@
+# Schools, companies and partners (front matter `organizations: [key, ...]`).
+# Logos live in assets/img/logos/<key>.png
+insa:
+  name: INSA Rennes
+  url: https://www.insa-rennes.fr/
+insa-carre:
+  name: INSA Rennes
+  url: https://www.insa-rennes.fr/
+scalian:
+  name: Scalian
+  url: https://www.scalian.com/
+laval-virtual:
+  name: Laval Virtual
+  url: https://www.laval-virtual.com/
+musee-beaux-arts-rennes:
+  name: Musée des Beaux-Arts de Rennes
+  url: https://mba.rennes.fr/
+team-solar-bretagne:
+  name: Team Solar Bretagne
+solar-decathlon:
+  name: Solar Decathlon Europe
+dreal-bretagne:
+  name: DREAL Bretagne
+  url: https://www.bretagne.developpement-durable.gouv.fr/
+unal:
+  name: Universidad Nacional de Colombia
+  url: https://unal.edu.co/
+bear:
+  name: Club BEAR
+forum-grand-ouest:
+  name: Forum Grand Ouest
+club-photo:
+  name: Club Photo INSA

@@ -1,0 +1,21 @@
+# Technologies referenced by projects (front matter `tools: [key, ...]`).
+# Logos live in assets/img/tools/<key>.png
+unreal: Unreal Engine
+unity: Unity
+blender: Blender
+cpp: C++
+csharp: C#
+opengl: OpenGL
+visual-studio: Visual Studio
+vscode: Visual Studio Code
+github: GitHub
+gitlab: GitLab
+overleaf: Overleaf
+revit: Revit
+html: HTML
+css: CSS
+javascript: JavaScript
+json: JSON
+qgis: QGIS
+geoserver: GeoServer
+mviewer: mviewer

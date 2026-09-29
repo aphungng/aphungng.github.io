@@ -1,0 +1,51 @@
+# Content of the /parcours/ page. Images live in assets/img/parcours/.
+insa:
+  title: Cursus Ingénieur Informatique à l'INSA Rennes
+  logo: insa
+  highlights:
+    - Déléguée de groupe pendant trois ans, spécialité Médias et Interactions (conception d'outils d'interaction adaptés aux besoins des utilisateurs).
+    - Cursus informatique fait en parallèle d'un panel d'enseignements d'humanités visant à sensibiliser à différentes problématiques qu'un ingénieur pourrait rencontrer.
+  projects_title: Quelques exemples de projets et réalisations
+  projects:
+    - title: Projet de jeu contrôlé grâce à un Leap Motion
+    - title: Projet de création d'un outil d'extraction d'informations d'images
+      image: extraction-images.jpg
+    - title: Projet de bagues d'aide au déplacement de personnes en situation de handicap
+      image: bagues.jpg
+    - title: Projet d'affichage de données relatives à des débits de rivières
+      image: debits-rivieres.jpg
+    - title: Projet de création d'un langage dédié à la classification en machine learning
+      image: langage-ml.jpg
+
+unal:
+  title: Université Nationale de Colombie
+  logo: unal
+  highlights:
+    - Semestre d'échange en ingénierie informatique, immersion complète en espagnol
+  courses_title: Enseignements
+  courses:
+    - text: Informatique visuelle (évaluation par projet)
+      url: https://visualcomputing2023-1.github.io/Showcase/
+    - text: Langages de programmation, compilation (évaluation par divers projets et exposé)
+    - text: Cryptographie (évaluation par projet, test, exposé)
+    - text: Programmation parallèle (évaluation par devoir surveillé, TP, présentation)
+  projects:
+    - title: Modélisation 3D du système Soleil-Terre-Lune en p5.js
+      image: soleil-terre-lune.jpg
+    - title: Programmation d'algorithmes basiques de cryptographie
+      image: cryptographie.jpg
+    - title: Génération aléatoire de terrain en p5.js
+      image: terrain.jpg
+    - title: Projet de développement d'un traducteur de Python à Go
+      image: python-go.jpg
+
+associations_title: Associations et points marquants de mon parcours
+associations:
+  - logo: insa-carre
+    text: Déléguée en filière internationale (FIRE), binômes de travail francophone / non-francophone.
+  - logo: bear
+    text: Club BEAR - Association d'accueil et d'intégration des étudiants étrangers au sein de l'INSA - Responsable événements
+  - logo: forum-grand-ouest
+    text: Forum Grand Ouest - Forum étudiant de recrutement en ingénierie et management - Chargée de communication sur les réseaux sociaux
+  - logo: club-photo
+    text: Club Photo - Photographe lors d'événements de l'INSA (Gala, festival Rock & Solex, ...)

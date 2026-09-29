@@ -1,0 +1,43 @@
+# Site settings — built by GitHub Pages (Jekyll 3.x) on every push.
+title: Alice Phung-Ngoc
+description: Ingénieure en informatique – Spécialisation en 3D et réalité virtuelle
+lang: fr
+locale: fr_FR
+author: Alice Phung-Ngoc
+
+# If the repository is named <user>.github.io, leave baseurl empty.
+# If it is a project repository (e.g. "portfolio"), set baseurl: "/portfolio".
+url: "https://aphungng.github.io"
+baseurl: ""
+
+collections:
+  projects:
+    output: true
+    permalink: /projets/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - tools/
+  - vendor/
+  - .jekyll-cache/

@@ -1,0 +1,33 @@
+{% assign projects = site.projects | sort: 'order' %}
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}">{{ site.data.profile.name }}</a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span class="sr-only">Menu</span>
+      <span class="nav-toggle-bars" aria-hidden="true"></span>
+    </button>
+
+    <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
+      <ul class="nav-list">
+        {% for item in site.data.navigation %}
+          <li>
+            <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a>
+          </li>
+        {% endfor %}
+        <li class="nav-projects">
+          <details>
+            <summary{% if page.collection == 'projects' %} class="is-active"{% endif %}>Projets</summary>
+            <ul class="nav-sub">
+              {% for p in projects %}
+                <li>
+                  <a href="{{ p.url | relative_url }}"{% if page.url == p.url %} aria-current="page"{% endif %}>{{ p.nav_title | default: p.title }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>

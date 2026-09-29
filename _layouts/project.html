@@ -1,0 +1,51 @@
+---
+layout: default
+---
+{%- assign img_dir = '/assets/img/projects/' | append: page.slug | append: '/' -%}
+<article class="project">
+  <header class="project-hero">
+    <img class="project-hero-img" src="{{ img_dir | append: 'hero.jpg' | relative_url }}" alt="" fetchpriority="high">
+    <div class="container project-hero-text">
+      {% if page.category %}<p class="eyebrow">{{ page.category }}</p>{% endif %}
+      <h1>{{ page.title }}</h1>
+    </div>
+  </header>
+
+  <div class="container project-intro">
+    <div class="lead reveal">{{ page.summary | markdownify }}</div>
+
+    <aside class="project-meta reveal" aria-label="Informations sur le projet">
+      {% if page.tools %}
+        <h2 class="meta-title">Outils</h2>
+        <ul class="tool-list">
+          {% for key in page.tools %}
+            <li class="tool" title="{{ site.data.tools[key] }}">
+              <img src="{{ '/assets/img/tools/' | append: key | append: '.png' | relative_url }}" alt="{{ site.data.tools[key] }}" loading="lazy">
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+
+      {% if page.organizations %}
+        <h2 class="meta-title">En collaboration avec</h2>
+        {% include org-logos.html keys=page.organizations %}
+      {% endif %}
+
+      {% if page.links %}
+        <h2 class="meta-title">Liens</h2>
+        <ul class="link-list">
+          {% for link in page.links %}
+            <li><a href="{{ link.url }}" target="_blank" rel="noopener">{{ link.label }} {% include icon.html name="external" %}</a></li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </aside>
+  </div>
+
+  <div class="container prose project-body">
+    {{ content }}
+  </div>
+
+  {% include gallery.html dir=img_dir title=page.title %}
+  {% include project-nav.html %}
+</article>

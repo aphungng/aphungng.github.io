@@ -1,0 +1,11 @@
+{%- comment -%} Usage: {% include org-logos.html keys=page.organizations %} {%- endcomment -%}
+<ul class="org-list">
+  {% for key in include.keys %}
+    {% assign org = site.data.organizations[key] %}
+    <li class="org">
+      {% if org.url %}<a href="{{ org.url }}" target="_blank" rel="noopener" title="{{ org.name }}">{% endif %}
+      <img src="{{ '/assets/img/logos/' | append: key | append: '.png' | relative_url }}" alt="{{ org.name }}" loading="lazy">
+      {% if org.url %}</a>{% endif %}
+    </li>
+  {% endfor %}
+</ul>

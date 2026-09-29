@@ -1,0 +1,20 @@
+# Content of the /esprit/ page. Images live in assets/img/esprit/.
+tagline: J'aime beaucoup découvrir de nouvelles manières de créer.
+passions:
+  - icon: pinceau
+    text: Passion pour les activités manuelles et créatives (peinture, dessin, art graphique).
+    photos: [tableaux.jpg, carte-peinte.jpg]
+  - icon: musique
+    text: Harpe au Conservatoire de Rennes pendant 8 ans, guitare et piano en autodidacte.
+    photos: [guitare.jpg]
+  - icon: echecs
+    text: Pratique des échecs en individuel et équipe pendant 8 ans, compétitions à niveau départemental, régional et national.
+    photos: [echecs.jpg]
+  - icon: photo
+    text: Photographe amateure et détentrice d'une licence de pilote de drone.
+    photos: [concert.jpg]
+  - icon: patisserie
+    text: Pâtissière en développement.
+    photos: [tarte.jpg]
+  - text: "... et fun fact : j'adore les poules !"
+    photos: [poule.jpg]

@@ -1,0 +1,7 @@
+# Main menu. The "Projets" dropdown is generated from the _projects collection.
+- title: Accueil
+  url: /
+- title: Esprit
+  url: /esprit/
+- title: Parcours
+  url: /parcours/
