@@ -12,6 +12,28 @@ insa:
     - text: A computer science curriculum taken alongside a range of humanities courses designed to raise awareness of the various issues an engineer may face.
       text_fr: Cursus informatique fait en parallèle d'un panel d'enseignements d'humanités visant à sensibiliser à différentes problématiques qu'un ingénieur pourrait rencontrer.
       text_es: Formación en informática cursada en paralelo con un conjunto de asignaturas de humanidades destinadas a sensibilizar sobre las distintas problemáticas que puede encontrar un ingeniero.
+  courses_title: Courses
+  courses_title_fr: Enseignements
+  courses_title_es: Asignaturas
+  courses:
+    - text: Software engineering - graphical programming, virtual reality, algorithmics, OOP, functional/logic programming, data structures, HCI, software modeling, web/mobile development
+      text_fr: Génie logiciel - programmation graphique, réalité virtuelle, algorithmique, POO, programmation fonctionnelle/logique, structures de données, IHM, modélisation logicielle, développement web/mobile
+      text_es: Ingeniería de software - programación gráfica, realidad virtual, algoritmia, programación orientada a objetos, programación funcional/lógica, estructuras de datos, interfaces hombre-máquina, modelado de software, desarrollo web/móvil
+    - text: Systems and networks - operating systems, networks, computer and system architecture, fundamentals of IT hygiene
+      text_fr: Systèmes et réseaux - systèmes d'exploitation, réseaux, architecture des ordinateurs et des systèmes, bases d'hygiène informatique
+      text_es: Sistemas y redes - sistemas operativos, redes, arquitectura de computadoras y sistemas, fundamentos de higiene informática
+    - text: Data and modeling - databases, machine learning, complexity
+      text_fr: Données et modélisation - bases de données, machine learning, complexité
+      text_es: Datos y modelado - bases de datos, aprendizaje automático, complejidad
+    - text: Acquiring knowledge from data - machine learning, image/video processing, language processing, data analysis, statistical methods, stochastic models, programming languages
+      text_fr: Acquisition de connaissances à partir de données - apprentissage, traitement image/vidéo, traitement du langage, analyse de données, méthodes statistiques, modèles stochastiques, langages
+      text_es: Adquisición de conocimiento a partir de datos - aprendizaje, procesamiento de imágenes/vídeo, procesamiento del lenguaje, análisis de datos, métodos estadísticos, modelos estocásticos, lenguajes
+    - text: General scientific training - introduction to operational management, mathematics for engineers, algorithmics, graph theory, logic
+      text_fr: Formation générale scientifique - introduction au management opérationnel, mathématiques pour l'ingénieur, algorithmique, graphes, logique
+      text_es: Formación científica general - introducción a la gestión operativa, matemáticas para ingenieros, algoritmia, grafos, lógica
+    - text: Humanities - culture and communication, English, Spanish, Chinese, risk management, project design, professional soft skills, physical education and sports, economics and management, social and environmental responsibilities
+      text_fr: Humanités - culture et communication, anglais, espagnol, chinois, gestion du risque, conception de projet, savoir-être en entreprise, éducation physique et sportive, économie-gestion, responsabilités sociales et environnementales
+      text_es: Humanidades - cultura y comunicación, inglés, español, chino, gestión de riesgos, diseño de proyectos, habilidades interpersonales en el entorno empresarial, educación física y deportiva, economía y gestión, responsabilidades sociales y medioambientales
   projects_title: A few examples of projects and achievements
   projects_title_fr: Quelques exemples de projets et réalisations
   projects_title_es: Algunos ejemplos de proyectos y logros
